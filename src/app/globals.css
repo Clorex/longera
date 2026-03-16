@@ -1,26 +1,158 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 0 0% 100%;
+  --foreground: 158 42% 20%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 158 42% 20%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 158 42% 20%;
+
+  --primary: 158 42% 20%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 50 43% 72%;
+  --secondary-foreground: 158 42% 20%;
+
+  --muted: 48 33% 96%;
+  --muted-foreground: 158 16% 34%;
+
+  --accent: 52 38% 85%;
+  --accent-foreground: 158 42% 20%;
+
+  --border: 45 24% 88%;
+  --input: 45 24% 88%;
+  --ring: 158 42% 20%;
+
+  --brand-green: 158 42% 20%;
+  --brand-green-soft: 151 22% 84%;
+  --brand-gold: 47 41% 66%;
+  --brand-gold-soft: 49 45% 84%;
+  --brand-cream: 42 38% 97%;
+  --brand-deep: 158 36% 16%;
+
+  --radius: 1rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  border-color: hsl(var(--border));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-feature-settings:
+    "rlig" 1,
+    "calt" 1;
+}
+
+::selection {
+  background: hsla(var(--secondary), 0.35);
+}
+
+@layer base {
+  body {
+    @apply min-h-screen bg-white text-[hsl(var(--foreground))] antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-[hsl(var(--brand-deep))];
+    font-family: var(--font-display), Georgia, serif;
+  }
+
+  p {
+    @apply leading-7 text-[hsl(var(--muted-foreground))];
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  button {
+    @apply transition-all duration-200;
+  }
+}
+
+@layer components {
+  .container-base {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-14 md:py-20;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl;
+  }
+
+  .section-subtitle {
+    @apply mt-3 max-w-2xl text-base md:text-lg;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .cta-shadow {
+    box-shadow: 0 14px 40px rgba(23, 73, 55, 0.12);
+  }
+
+  .card-soft {
+    @apply rounded-[28px] border bg-white shadow-sm;
+  }
+
+  .brand-panel {
+    @apply rounded-[32px] border border-[hsl(var(--border))] bg-white;
+  }
+
+  .banner-gradient {
+    background:
+      radial-gradient(circle at top right, rgba(214, 201, 148, 0.18), transparent 28%),
+      radial-gradient(circle at bottom left, rgba(154, 188, 172, 0.22), transparent 30%),
+      linear-gradient(135deg, rgba(252, 250, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(
+      135deg,
+      rgba(214, 201, 148, 1) 0%,
+      rgba(196, 173, 102, 1) 100%
+    );
+  }
+
+  .soft-green-gradient {
+    background: linear-gradient(
+      135deg,
+      rgba(238, 245, 240, 1) 0%,
+      rgba(223, 235, 227, 1) 100%
+    );
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-[hsl(var(--brand-green))];
+  }
+
+  .link-hover {
+    @apply hover:text-[hsl(var(--brand-green))];
+  }
+
+  .watermark-mask {
+    pointer-events: none;
+    user-select: none;
+  }
 }
