@@ -1,4 +1,4 @@
-import { siteConfig } from "@/lib/site";
+﻿import { siteConfig } from "@/lib/site";
 
 export function createOrganizationSchema() {
   return {
@@ -16,7 +16,6 @@ export function createOrganizationSchema() {
       siteConfig.links.instagram,
       siteConfig.links.facebook,
       siteConfig.links.tiktok,
-      siteConfig.links.linkedin,
     ].filter(Boolean),
   };
 }

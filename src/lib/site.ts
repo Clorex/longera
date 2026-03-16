@@ -14,7 +14,6 @@
     instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "",
     facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || "",
     tiktok: process.env.NEXT_PUBLIC_TIKTOK_URL || "",
-    linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "",
     blog: process.env.NEXT_PUBLIC_BLOG_URL || "",
   },
   themeColor: "#174937",

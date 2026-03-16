@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { footerNav } from "@/data/navigation";
 import { Container } from "@/components/layout/container";
 import { siteConfig } from "@/lib/site";
@@ -9,7 +9,6 @@ export function Footer() {
     { label: "Instagram", href: siteConfig.links.instagram },
     { label: "Facebook", href: siteConfig.links.facebook },
     { label: "TikTok", href: siteConfig.links.tiktok },
-    { label: "LinkedIn", href: siteConfig.links.linkedin },
   ].filter((item) => item.href);
 
   return (
