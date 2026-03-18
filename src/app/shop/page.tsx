@@ -23,7 +23,7 @@ export default function ShopPage() {
 
       <section className="section-space">
         <Container className="space-y-8">
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-2">
+          <div id="products" className="grid gap-6 md:grid-cols-2 xl:grid-cols-2">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -34,7 +34,7 @@ export default function ShopPage() {
             title="Gift someone Longera Black or Green today."
             description="Show love with a thoughtful daily essential designed for confidence, freshness, and clean care."
             ctaLabel="Explore Products"
-            ctaHref="/shop"
+            ctaHref="#products"
             variant="gold"
           />
         </Container>
