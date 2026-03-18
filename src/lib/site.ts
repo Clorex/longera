@@ -5,9 +5,9 @@
     "Longera is a science-backed natural deodorant brand designed for real odour control without harsh chemicals, aluminium, or fragrance.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   ogImage: "/og-image.jpg",
-  logo: "/logo.png",
+  logo: "/logo.jpg",
   tagline: "Where odour ends, desire begins",
-  adminEmail: process.env.ADMIN_EMAIL || "sunday@longera.com.au",
+  adminEmail: process.env.ADMIN_EMAIL || "askthescientist@longera.com.au",
   orderEmail:
     process.env.ORDER_NOTIFICATION_EMAIL || "orders@longera.com.au",
   links: {
@@ -18,3 +18,4 @@
   },
   themeColor: "#174937",
 };
+

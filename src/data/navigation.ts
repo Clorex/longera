@@ -6,6 +6,7 @@ export const mainNav: NavItem[] = [
   { label: "Science", href: "/science" },
   { label: "Reviews", href: "/reviews" },
   { label: "Blog", href: "/blog" },
+  { label: "Track Order", href: "/track-order" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -16,6 +17,7 @@ export const footerNav: NavItem[] = [
   { label: "Science", href: "/science" },
   { label: "Reviews", href: "/reviews" },
   { label: "Blog", href: "/blog" },
+  { label: "Track Order", href: "/track-order" },
   { label: "Gift Options", href: "/gifting" },
   { label: "Shipping Policy", href: "/shipping-policy" },
   { label: "Refund Policy", href: "/refund-policy" },

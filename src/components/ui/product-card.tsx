@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/types/content";
 import { formatPrice } from "@/lib/utils";

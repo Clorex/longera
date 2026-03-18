@@ -20,13 +20,13 @@ export function Logo({
         <Image
           src={siteConfig.logo}
           alt={siteConfig.name}
-          width={220}
-          height={90}
+          width={150}
+          height={56}
           priority
-          className={cn("h-auto w-[160px] object-contain md:w-[220px]", imageClassName)}
+          className={cn("h-auto w-[110px] object-contain md:w-[150px]", imageClassName)}
         />
         {showTagline && (
-          <span className="mt-1 text-[10px] uppercase tracking-[0.22em] text-[hsl(var(--muted-foreground))]">
+          <span className="mt-1 text-[9px] uppercase tracking-[0.18em] text-[hsl(var(--muted-foreground))]">
             {siteConfig.tagline}
           </span>
         )}

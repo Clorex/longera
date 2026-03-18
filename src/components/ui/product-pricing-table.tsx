@@ -13,7 +13,7 @@ export function ProductPricingTable({ variant }: ProductPricingTableProps) {
   return (
     <div className="card-soft p-6 md:p-7">
       <h3 className="text-2xl font-semibold text-[hsl(var(--brand-deep))]">
-        Bundle Pricing
+        Multi-Buy Pricing
       </h3>
 
       <div className="mt-5 overflow-x-auto">
@@ -21,8 +21,8 @@ export function ProductPricingTable({ variant }: ProductPricingTableProps) {
           <thead>
             <tr className="border-b border-[hsl(var(--border))]">
               <th className="pb-3">Quantity</th>
-              <th className="pb-3">Standard Total</th>
-              <th className="pb-3">Discount</th>
+              <th className="pb-3">Total</th>
+              <th className="pb-3">Offer</th>
               <th className="pb-3">Shipping</th>
             </tr>
           </thead>
@@ -32,7 +32,9 @@ export function ProductPricingTable({ variant }: ProductPricingTableProps) {
                 <td className="py-4">{tier.quantity}</td>
                 <td className="py-4">{formatPrice(tier.total)}</td>
                 <td className="py-4">
-                  {tier.discountPercent > 0 ? `${tier.discountPercent}% off` : "None"}
+                  {tier.quantity === 1
+                    ? "Standard single purchase"
+                    : `${tier.discountPercent}% off multi-buy`}
                 </td>
                 <td className="py-4">
                   {tier.freeShipping ? "Free shipping" : "Standard shipping"}
@@ -42,10 +44,6 @@ export function ProductPricingTable({ variant }: ProductPricingTableProps) {
           </tbody>
         </table>
       </div>
-
-      <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">
-        Admin can later update these pricing tiers from the dashboard when product CRUD is fully connected.
-      </p>
     </div>
   );
 }
