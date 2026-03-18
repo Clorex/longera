@@ -44,8 +44,25 @@ export function Footer() {
             Contact
           </p>
           <div className="mt-4 space-y-3 text-sm text-[hsl(var(--muted-foreground))]">
-            <p>Admin: {siteConfig.adminEmail}</p>
-            <p>Orders: {siteConfig.orderEmail}</p>
+            <p>
+              The Medical Scientist:{" "}
+              <a
+                href={`mailto:${siteConfig.adminEmail}`}
+                className="link-hover underline-offset-4 hover:underline"
+              >
+                {siteConfig.adminEmail}
+              </a>
+            </p>
+
+            <p>
+              Orders:{" "}
+              <a
+                href={`mailto:${siteConfig.orderEmail}`}
+                className="link-hover underline-offset-4 hover:underline"
+              >
+                {siteConfig.orderEmail}
+              </a>
+            </p>
 
             {socials.length > 0 && (
               <div className="flex flex-wrap gap-4 pt-2">
