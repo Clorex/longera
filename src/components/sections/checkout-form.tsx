@@ -233,12 +233,6 @@ export function CheckoutForm() {
                   <p className="text-sm text-[hsl(var(--muted-foreground))]">
                     {item.variant} | {item.sizeLabel}
                   </p>
-                  {item.giftWrap ? <p className="text-xs">Gift wrap included</p> : null}
-                  {item.giftNote ? (
-                    <p className="text-xs italic text-[hsl(var(--muted-foreground))]">
-                      {item.giftNote}
-                    </p>
-                  ) : null}
                   {pricing.discountPercent > 0 ? (
                     <p className="text-xs text-[hsl(var(--brand-deep))]">
                       {pricing.discountPercent}% discount

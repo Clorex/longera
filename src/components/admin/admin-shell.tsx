@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
@@ -9,7 +9,6 @@ const navItems = [
   { label: "Dashboard", href: "/admin/dashboard" },
   { label: "Products", href: "/admin/products" },
   { label: "Orders", href: "/admin/orders" },
-  { label: "Blog", href: "/admin/blog" },
   { label: "Discounts", href: "/admin/discounts" },
 ];
 
@@ -28,7 +27,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
         <div className="container-base flex h-16 items-center justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[hsl(var(--brand-green))]">
-              Longéra Admin
+              Longera Admin
             </p>
           </div>
 

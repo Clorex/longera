@@ -1,12 +1,7 @@
-import { blogPosts, faqs, homepageBanners, products, reviews } from "@/data/content-index";
+﻿import { faqs, homepageBanners, products, reviews } from "@/data/content-index";
 
 export function getFeaturedReviews(limit = 3) {
   return reviews.filter((review) => review.approved).slice(0, limit);
-}
-
-export function getPublishedPosts(limit?: number) {
-  const published = blogPosts.filter((post) => post.published);
-  return typeof limit === "number" ? published.slice(0, limit) : published;
 }
 
 export function getHomepageBanners(limit?: number) {

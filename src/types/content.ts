@@ -52,19 +52,6 @@ export type ReviewItem = {
   approved?: boolean;
 };
 
-export type BlogPost = {
-  id: string;
-  slug: string;
-  title: string;
-  excerpt: string;
-  coverImage?: string;
-  category: string;
-  publishedAt: string;
-  author: string;
-  content: string;
-  published?: boolean;
-};
-
 export type PolicySection = {
   title: string;
   body: string[];

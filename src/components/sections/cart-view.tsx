@@ -78,14 +78,6 @@ export function CartView() {
                   Variant: {item.variant} | {item.sizeLabel}
                 </p>
 
-                {item.giftWrap ? <p className="mt-2 text-sm">Gift wrap added</p> : null}
-
-                {item.giftNote ? (
-                  <p className="mt-2 text-sm">
-                    Gift note: <span className="italic">{item.giftNote}</span>
-                  </p>
-                ) : null}
-
                 <div className="mt-2 text-sm text-[hsl(var(--brand-deep))]">
                   {pricing.discountPercent > 0 ? (
                     <p>

@@ -1,5 +1,4 @@
-import type { MetadataRoute } from "next";
-import { blogPosts } from "@/data/blog";
+﻿import type { MetadataRoute } from "next";
 import { products } from "@/data/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -11,9 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/science",
     "/about",
     "/reviews",
-    "/blog",
     "/contact",
     "/gifting",
+    "/track-order",
     "/shipping-policy",
     "/refund-policy",
     "/privacy-policy",
@@ -22,17 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  const blogRoutes = blogPosts
-    .filter((post) => post.published)
-    .map((post) => ({
-      url: `${baseUrl}/blog/${post.slug}`,
-      lastModified: new Date(post.publishedAt),
-    }));
-
   const productRoutes = products.map((product) => ({
     url: `${baseUrl}/shop/${product.slug}`,
     lastModified: new Date(),
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...productRoutes];
+  return [...staticRoutes, ...productRoutes];
 }

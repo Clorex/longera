@@ -45,8 +45,6 @@ export async function POST(req: Request) {
                 ? `Discount: ${tier.discountPercent}%`
                 : null,
               tier?.freeShipping ? "Free shipping eligible" : null,
-              item.giftWrap ? "Gift wrap: Yes" : null,
-              item.giftNote ? `Gift note: ${item.giftNote}` : null,
             ]
               .filter(Boolean)
               .join(" | "),

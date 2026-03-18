@@ -13,8 +13,6 @@ type AddToCartFormProps = {
 
 export function AddToCartForm({ product }: AddToCartFormProps) {
   const [quantity, setQuantity] = useState(1);
-  const [giftWrap, setGiftWrap] = useState(false);
-  const [giftNote, setGiftNote] = useState("");
   const [added, setAdded] = useState(false);
 
   const pricing = useMemo(
@@ -23,8 +21,8 @@ export function AddToCartForm({ product }: AddToCartFormProps) {
   );
 
   const cartItemId = useMemo(() => {
-    return `${product.slug}-${giftWrap}-${giftNote.trim() || "no-note"}-${quantity}`;
-  }, [product.slug, giftWrap, giftNote, quantity]);
+    return `${product.slug}-${quantity}`;
+  }, [product.slug, quantity]);
 
   function handleAddToCart() {
     addToCart({
@@ -38,8 +36,8 @@ export function AddToCartForm({ product }: AddToCartFormProps) {
       quantity,
       variant: product.variant,
       sizeLabel: product.sizeLabel,
-      giftWrap,
-      giftNote: giftNote.trim(),
+      giftWrap: false,
+      giftNote: "",
     });
 
     setAdded(true);
@@ -110,30 +108,6 @@ export function AddToCartForm({ product }: AddToCartFormProps) {
               {pricing.freeShipping ? "Free shipping included" : "Standard shipping applies"}
             </span>
           </div>
-        </div>
-      </div>
-
-      <div className="mt-6 rounded-[20px] border border-[hsl(var(--border))] bg-[hsl(var(--brand-cream))] p-4">
-        <label className="flex items-center gap-3 text-sm font-medium text-[hsl(var(--brand-deep))]">
-          <input
-            type="checkbox"
-            checked={giftWrap}
-            onChange={(e) => setGiftWrap(e.target.checked)}
-            className="h-4 w-4"
-          />
-          Add gift wrap
-        </label>
-
-        <div className="mt-4">
-          <label className="text-sm font-medium text-[hsl(var(--brand-deep))]">
-            Gift note
-          </label>
-          <textarea
-            value={giftNote}
-            onChange={(e) => setGiftNote(e.target.value)}
-            placeholder="Write a short gift message..."
-            className="mt-2 min-h-[110px] w-full rounded-2xl border border-[hsl(var(--border))] bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[hsl(var(--ring))]"
-          />
         </div>
       </div>
 

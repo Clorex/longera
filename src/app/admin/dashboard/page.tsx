@@ -1,9 +1,8 @@
-import { AdminGuard } from "@/components/admin/admin-guard";
+﻿import { AdminGuard } from "@/components/admin/admin-guard";
 import { AdminShell } from "@/components/admin/admin-shell";
 import { AdminCard } from "@/components/admin/admin-card";
 import { products } from "@/data/products";
 import { reviews } from "@/data/reviews";
-import { blogPosts } from "@/data/blog";
 
 export default function AdminDashboardPage() {
   return (
@@ -17,28 +16,23 @@ export default function AdminDashboardPage() {
             </h1>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             <AdminCard title="Products">
               <p className="text-4xl font-semibold">{products.length}</p>
-              <p className="mt-2 text-sm">Current seeded products</p>
+              <p className="mt-2 text-sm">Current products</p>
             </AdminCard>
 
             <AdminCard title="Reviews">
               <p className="text-4xl font-semibold">{reviews.length}</p>
-              <p className="mt-2 text-sm">Current seeded reviews</p>
-            </AdminCard>
-
-            <AdminCard title="Blog Posts">
-              <p className="text-4xl font-semibold">{blogPosts.length}</p>
-              <p className="mt-2 text-sm">Blog structure prepared</p>
+              <p className="mt-2 text-sm">Current review entries</p>
             </AdminCard>
           </div>
 
           <AdminCard title="Admin Notes">
             <ul className="list-disc space-y-2 pl-5 text-sm text-[hsl(var(--muted-foreground))]">
-              <li>Firebase-backed admin CRUD can be connected after UI approval.</li>
-              <li>Cloudinary upload helper route is prepared in this batch.</li>
-              <li>Orders are already being stored in Firebase from the payment flow.</li>
+              <li>Orders are being stored in Firebase after successful checkout.</li>
+              <li>Cloudinary upload helper route is prepared.</li>
+              <li>Product/admin CRUD can be extended later.</li>
             </ul>
           </AdminCard>
         </div>
