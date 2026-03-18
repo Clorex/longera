@@ -38,7 +38,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     product.variant === "black" ? "Buy 2 for AUD 45" : "Buy 2 for AUD 54";
 
   const detailImage =
-    product.variant === "black" ? "/item2.png" : "/item6.png";
+    product.variant === "black" ? "/black-detail.png" : "/green-detail.png";
 
   return (
     <SiteShell>

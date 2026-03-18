@@ -7,7 +7,7 @@ export const blogPosts: BlogPost[] = [
     title: "Why Body Odour Happens: Sweat, Skin Bacteria, and Biology",
     excerpt:
       "Understand the relationship between sweat, bacteria, and the compounds that create underarm odour.",
-    coverImage: "/item3.png",
+    coverImage: "/black-detail.png",
     category: "Education",
     publishedAt: "2026-03-15",
     author: "Longéra",
@@ -28,7 +28,7 @@ At Longéra, the product story focuses on that biological process rather than co
     title: "The Benefits of Choosing a Fragrance-Free Deodorant",
     excerpt:
       "Fragrance-free deodorant can be a better fit for people who want a cleaner, more minimalist care routine.",
-    coverImage: "/item2.png",
+    coverImage: "/black-detail.png",
     category: "Self-Care",
     publishedAt: "2026-03-16",
     author: "Longéra",
@@ -47,7 +47,7 @@ For many people, this feels cleaner, simpler, and more practical for everyday we
     title: "Everyday vs Sport Deodorant: Which One Fits Your Routine?",
     excerpt:
       "Choosing between an everyday formula and a sport-focused option depends on your climate, activity, and lifestyle.",
-    coverImage: "/item1.png",
+    coverImage: "/black-shop.png",
     category: "Guides",
     publishedAt: "2026-03-17",
     author: "Longéra",

@@ -9,8 +9,8 @@ export const products: Product[] = [
     variant: "black",
     price: 25,
     currency: "AUD",
-    images: ["/item1.png", "/item2.png"],
-    featuredImage: "/item1.png",
+    images: ["/black-shop.png", "/black-detail.png"],
+    featuredImage: "/black-shop.png",
     badge: "Best Seller",
     shortDescription:
       "A clean, science-backed everyday deodorant designed for confidence, simplicity, and real odour control.",
@@ -61,8 +61,8 @@ export const products: Product[] = [
     variant: "green",
     price: 30,
     currency: "AUD",
-    images: ["/item5.png", "/item6.png"],
-    featuredImage: "/item5.png",
+    images: ["/green-shop.png", "/green-detail.png"],
+    featuredImage: "/green-shop.png",
     badge: "Sport and Heat",
     shortDescription:
       "A stronger option for active lifestyles, hotter days, workouts, and more demanding routines.",

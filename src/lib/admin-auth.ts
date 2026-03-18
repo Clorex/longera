@@ -1,7 +1,7 @@
 const ADMIN_SESSION_KEY = "longera-admin-session";
 
 export function getAdminEmail() {
-  return process.env.NEXT_PUBLIC_ADMIN_EMAIL || "sunday@longera.com.au";
+  return process.env.NEXT_PUBLIC_ADMIN_EMAIL || "askthescientist@longera.com.au";
 }
 
 export function saveAdminSession(email: string) {
