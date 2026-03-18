@@ -1,4 +1,4 @@
-import { ReviewItem } from "@/types/content";
+﻿import { ReviewItem } from "@/types/content";
 import { ReviewCard } from "@/components/ui/review-card";
 
 type ProductReviewsListProps = {
@@ -7,16 +7,7 @@ type ProductReviewsListProps = {
 
 export function ProductReviewsList({ reviews }: ProductReviewsListProps) {
   if (!reviews.length) {
-    return (
-      <div className="card-soft p-6">
-        <h3 className="text-xl font-semibold text-[hsl(var(--brand-deep))]">
-          Reviews
-        </h3>
-        <p className="mt-3 text-sm md:text-base">
-          Reviews for this product will appear here.
-        </p>
-      </div>
-    );
+    return null;
   }
 
   return (
